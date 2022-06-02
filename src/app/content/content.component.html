@@ -1,0 +1,29 @@
+<div class="head-section">
+  <h3>Create a new Customer or select an existing one</h3>
+  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod</p>
+  <div class="search-container">
+    <form action="#">
+      <input type="text" placeholder="Search for a customer" name="search" />
+    </form>
+  </div>
+</div>
+<div class="content-section">
+  <a class="create-link text-decoration-none font-weight-bold" href="#"
+    >&#43; Create a new Customer</a
+  >
+  <div class="block" *ngFor="let customer of customerDetails">
+    <div class="company-details">
+      <img src="{{ customer.logo }}" />
+      <div class="company-info">
+        <p class="company-name">{{ customer.companyName }}</p>
+        <p class="name">{{ customer.name }}</p>
+      </div>
+    </div>
+    <p class="color-grey">{{ customer.address }}</p>
+    <a
+      class="color-grey text-decoration-none"
+      href="mailto:{{ customer.email }}"
+      >{{ customer.email }}</a
+    >
+  </div>
+</div>
